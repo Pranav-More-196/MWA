@@ -1,0 +1,16 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 600px;
+    border-radius: 10px;
+}

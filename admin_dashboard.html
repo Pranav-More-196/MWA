@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>body { background-image: url('images/dashboard.jpg'); }</style>
+</head>
+<body>
+  <div class="container">
+    <h2>All Registrations</h2>
+    <table border="1" width="100%" style="background-color: white; color: black;">
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Event</th></tr>
+      </thead>
+      <tbody id="dataBody"></tbody>
+    </table>
+  </div>
+  <script>
+    const registrations = JSON.parse(localStorage.getItem("registrations") || "[]");
+    const tbody = document.getElementById("dataBody");
+    registrations.forEach(r => {
+      tbody.innerHTML += `<tr><td>${r.name}</td><td>${r.email}</td><td>${r.event}</td></tr>`;
+    });
+  </script>
+</body>
+</html>
