@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Admin button styling */
+        .admin-button-wrapper {
+            text-align: right;
+            padding: 20px 40px 0 0;
+        }
+
+        .admin-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .admin-btn:hover {
+            background-color: #555;
+        }
+
+        /* Container override if needed */
+        .container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Admin Dashboard Button -->
+    
+    <div class="container">
+      
+        <div class="form-box">
+            <h1>Register for the Event</h1>
+            <form action="register.php" method="POST" enctype="multipart/form-data">
+                
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Select Event</label>
+                    <select name="event_name" required>
+                        <option value="Tech Conference">Tech Conference</option>
+                        <option value="Music Festival">Music Festival</option>
+                        <option value="Business Summit">Business Summit</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Attendee Type</label>
+                    <select name="attendee_type" required>
+                        <option value="General">General</option>
+                        <option value="VIP">VIP</option>
+                        <option value="Speaker">Speaker</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Upload ID Proof</label>
+                    <input type="file" name="upload_id" required>
+                </div>
+
+                <div class="input-group">
+                    <button type="submit">Register Now</button>
+                </div>
+                <div class="input-group">
+                    <a href="admin_dashboard.php" class="admin-btn" target="_blank">Admin Dashboard</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
